@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update User</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styleuser.css">
+    </head>
+<body>
+        <div class="f1">
+            <form action="updateuser.php" method="post">
+                <input type="text" placeholder="Client National ID" required class ="f33" name="id">
+                <input type="text" placeholder="new data" required class ="f33" name="new">
+                <div class="f22">
+                    <span><input  class ="f33"  type="radio" name ="x" value ="country"required></span><label ><strong>Country</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <span><br><br></span><span><input class ="f33" type="radio" name ="x" value ="phone"></span><label ><strong>Phone</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <span><input class ="f33" type="radio" name ="x" value ="email"></span><label ><strong>email</strong></label>
+                </div>
+                <button class ="new"type="submit">Update</button><br><br><br><br>
+                <input type=button onClick="parent.location='homepage.html'" value='Back Home' class="f333">
+            </form>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+room
+
+create table room (
+r_no TINYINT primary key,
+occupied BOOLEAN not null,
+type enum('Single','Double','Suite') not null,
+seaview BOOLEAN not null);
+
+
+insert into room values ( 1 , 0 , 'Single' , 0);
+insert into room values ( 2 , 0 , 'Single' , 0);
+insert into room values ( 3 , 0 , 'Single' , 0);
+insert into room values ( 4 , 0 , 'Single' , 0);
+insert into room values ( 5 , 0 , 'Single' , 0);
+insert into room values ( 6 , 0 , 'Single' , 0);
+insert into room values ( 7 , 0 , 'Single' , 0);
+insert into room values ( 8 , 0 , 'Single' , 1);
+insert into room values ( 9 , 0 , 'Single' , 1);
+insert into room values ( 10 , 0 ,'Single' , 1);
+insert into room values ( 50 , 0 , 'Double' , 0);
+insert into room values ( 51 , 0 , 'Double' , 0);
+insert into room values ( 52 , 0 , 'Double' , 0);
+insert into room values ( 53 , 0 , 'Double' , 0);
+insert into room values ( 54 , 0 , 'Double' , 0);
+insert into room values ( 55 , 0 , 'Double' , 0);
+insert into room values ( 56 , 0 , 'Double' , 1);
+insert into room values ( 57 , 0 , 'Double' , 1);
+insert into room values ( 58 , 0 , 'Double' , 1);
+insert into room values ( 59 , 0 , 'Double' , 1);
+insert into room values ( 60 , 0 , 'Double' , 1);
+insert into room values ( 100 , 0 ,'Suite' , 0);
+insert into room values ( 101 , 0 , 'Suite' , 0);
+insert into room values ( 102 , 0 , 'Suite' , 0);
+insert into room values ( 103 , 0 , 'Suite' , 0);
+insert into room values ( 104 , 0 , 'Suite' , 1);
+insert into room values ( 105 , 0 , 'Suite' , 1);
+
+============
+
+create table client(
+id varchar(50) primary key,
+name varchar(50) not null,
+country varchar(50)  not null,
+phone varchar(50) not null,
+email varchar(50) not null,
+firstcome date not null
+);
+
+//date will be insert inside the php form no need to write it here
+insert into client values ('30113242500918', 'ahmed galal', 'egypt', '01099699177', 'ahmedglal@protonmail.com','');
+insert into client values ('30113242500919', 'ahmed khaled', 'egypt', '01599699177', 'be7a@gmail.com','');
+insert into client values ('30113242500916', 'hazem machine', 'egypt', '01399699177', 'nahoo@protonmail.com','');
+insert into client values ('30113242500917', 'ahmed fahmy', 'egypt', '01299699177', 'fahmy@protonmail.com','');
+insert into client values ('30113242500915', 'zezo', 'england', '01099644177', 'abdelaziz@protonmail.com','');
+insert into client values ('30113242500914', 'ezzat', 'dubai', '01095599177', 'ezzat@protonmail.com','');
+insert into client values ('30113242500913', 'hussein', 'U.S.A', '01024232177', 'leader@protonmail.com','');
+insert into client values ('30113242500912', 'ayman salah', 'switzerland', '010111111', 'aymoon@protonmail.com','');
+insert into client values ('30113242500911', 'mamoud ashor', 'tanta', '01099623423', 'worldfinalist@protonmail.com','');
+insert into client values ('30113242500928', 'samir', 'palestine', '0109912412', 'war@protonmail.com','');
+insert into client values ('30113242500958', 'madeeha', 'russia', '01091234124', 'kitchen@protonmail.com','');
+
+
+================
+
+create table occupied(
+    client_id varchar(50) not null,
+     room_id TINYINT not null,
+     reserve_Time date not null,
+         FOREIGN KEY(client_id)
+             REFERENCES client(id)
+             ON DELETE CASCADE,
+         FOREIGN KEY(room_id)
+             REFERENCES room(r_no)
+             ON DELETE CASCADE,
+                 PRIMARY KEY(client_id,room_id)
+     );
+
+===================
+create table roomcost(
+type varchar(10),
+seaview boolean not null,
+costpn int ,
+ primary key(type,seaview)
+);
+
+insert into roomcost values('Single',0,30);
+insert into roomcost values('Single',1,70);
+insert into roomcost values('Double',0,90);
+insert into roomcost values('Double',1,150);
+insert into roomcost values('Suite',0,400);
+insert into roomcost values('Suite',1,600);
+
+=============
+select 
+c.id,c.name,r.r_no,o.reserve_Time
+from
+client c
+join occupied o on o.client_id=c.id join room r on o.room_id=r.r_no;
+=============
+create function totaldays(x date,y date)returns int deterministic return y-x;
+create function calccost(x date,y date,price int) returns int deterministic return (totaldays(x,y)+1)*price;
+========

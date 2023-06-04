@@ -1,0 +1,155 @@
+body {
+    padding: 0;
+    margin : 0;
+    background-image   : url("reception.jpg");
+    background-position: center;
+    background-size    : cover;
+}
+
+.f1 {
+    display            : flex;
+    justify-content    : center;
+    align-items: center;
+    height     : 100vh;
+    width      : 100%;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    border       : 0px;
+    padding      : 7px 15px;
+    width        : 75%;
+    padding      : 11px 8px;
+    border-radius: 5px;
+    margin-bottom: 27px;
+    background-color : rgba(255, 255, 255, 0.608);
+}
+
+button {
+    display      : block;
+    border       : 100px;
+    width        : 10%;
+    padding      : 11px 8px;
+    border-radius: 5px;
+    margin       : auto;
+    background-color :rgba(255, 255, 255, 0.608);
+
+}
+
+.f2
+{
+    margin-left: -200px;
+    margin-right: -200px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+}
+.back{
+    width        : 20%;
+}
+
+/*  for update uerer form */
+.f33{
+    border       : 0px;
+    padding      : 7px 15px;
+    width        : 90%;
+    padding      : 11px 8px;
+    border-radius: 5px;
+    margin-bottom: 27px;
+    background-color : rgba(255, 255, 255, 0.608);
+}
+.f333{
+    border       : 0px;
+    padding      : 7px 15px;
+    width        : 30%;
+    padding      : 11px 8px;
+    border-radius: 5px;
+    margin-bottom: 27px;
+    background-color : rgba(255, 255, 255, 0.608);
+}
+.back1{
+    width        : 50%;
+}
+.bbutton {
+    display      : block;
+    border       : 150px;
+    width        : 50%;
+    padding      : 11px 8px;
+    border-radius: 5px;
+    margin       : auto;
+    background-color :rgba(255, 255, 255, 0.608);
+
+}
+.f22
+{
+    margin-left: -190px;
+    margin-right: -190px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+}
+.new{
+        display      : block;
+        border       : 100px;
+        width        : 30%;
+        padding      : 11px 8px;
+        border-radius: 5px;
+        margin       : auto;
+        background-color :rgba(255, 255, 255, 0.608);
+    
+}
+/* for delete*/
+.f34{
+    border       : 0px;
+    padding      : 7px 15px;
+    width        : 120%;
+    padding      : 11px 8px;
+    border-radius: 5px;
+    margin-bottom: 27px;
+    margin-left: -25px;
+    background-color : rgba(255, 255, 255, 0.608);
+}
+.new1{
+    display      : block;
+    border       : 100px;
+    width        : 50%;
+    padding      : 11px 8px;
+    border-radius: 5px;
+    margin       : auto;
+    background-color :rgba(255, 255, 255, 0.608);
+
+}
+.f334{
+    border       : 0px;
+    padding      : 7px 15px;
+    width        : 60%;
+    padding      : 11px 8px;
+    border-radius: 5px;
+    margin-bottom: 27px;
+    background-color : rgba(255, 255, 255, 0.608);
+}
+/**/
+.f35{
+    border       : 0px;
+    padding      : 7px 15px;
+    width        : 90%;
+    padding      : 11px 8px;
+    border-radius: 5px;
+    margin-bottom: 27px;
+    background-color : rgba(255, 255, 255, 0.608);
+    color: black;
+}
+.f25
+{
+    margin-left: -190px;
+    margin-right: -190px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
